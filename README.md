@@ -1,9 +1,9 @@
 # workout-tracker
 
   ## Description
-  create a readme generator
+  For the assignment, I had to create a workout tracker that required me to create a Mongo database with a Mongoose schema and handle routes with Express
 
-   ![burger](public/assets/screenshot.png)
+   ![burger](./assets/workouttracker.gif)
 
   ## Table of Contents
 
