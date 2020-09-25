@@ -24,8 +24,9 @@ router.get("/api/workouts/range", (req, res) => {
 
 router.put("/api/workouts/:id", (req, res) => {
   WorkoutTracker.findByIdAndUpdate(req.params.id, {
-    $push: { exercises: req.body }
-  })
+    $push: { exercises: req.body } },
+    { new: true, runValidators: true}
+  )
     .then((data) => {
       res.json(data);
     })
@@ -40,7 +41,7 @@ router.post("/api/workouts", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      res.json;
+      res.json(err);
     });
 });
 
